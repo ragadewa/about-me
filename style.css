@@ -258,14 +258,35 @@ h2 {
 }
 
 /* Responsif untuk layar HP: ngubah layout Tentang Saya jadi vertikal biar nggak gepeng */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
 @media (max-width: 600px) {
+    .nav-wrapper {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 0;
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 14px;
+        font-size: 0.875rem;
+    }
+
     .about-section {
         flex-direction: column;
         text-align: center;
     }
 
     .section {
-        padding: 24px;
+        padding: 20px;
+        margin: 20px 0;
     }
 
     .btn-submit {
